@@ -5,9 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Wants To Be A Millionaire</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/app.js"></script>
+    <script defer src="/js/app.js"></script>
+    
 </head>
 <body>
+    <main>
+        <div class="progress-container hidden">
+
+            <div class="progress-pill" id="pill10">$1,000,000</div>
+            <div class="progress-pill" id="pill9">$500,000</div>
+            <div class="progress-pill" id="pill8">$250,000</div>
+            <div class="progress-pill" id="pill7">$125,000</div>
+            <div class="progress-pill" id="pill6">$60,000</div>
+            <div class="progress-pill" id="pill5">$30,000</div>
+            <div class="progress-pill" id="pill4">$15,000</div>
+            <div class="progress-pill" id="pill3">$6,000</div>
+            <div class="progress-pill" id="pill2">$3,000</div>
+            <div class="progress-pill" id="pill1">$1,000</div>
+    
+        </div>
+
+        <div class="container">
+            <div class="who text-bg">Who Wants To Be A Millionaire</div>
+            
+            <div class="question-container hidden text-bg">
+                <h2 id="question-text"></h2>
+
+                <div class="answerBtns">
+                    <button class ="answerBtnOne btnShape">Answer1</button>
+                    <button class ="answerBtnTwo btnShape">Answer2</button>
+                    <button class ="answerBtnThree btnShape">Answer3</button>
+                    <button class ="answerBtnFour btnShape">Answer4</button>
+                </div>   
+            </div>
+
+            <button class="startBtn">Start</button>
+            <button class="allrightBtn">Allright!</button>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button class="thankBtn">Thank you!</button>
+            <button class="ok">Ok</button>
+
+            <button class="nextBtnOne hidden">Next</button>
+            <button class="nextBtnTwo hidden">Next</button>
+            <button class="nextBtnThree hidden">Next</button>
+            <button class="nextBtnFour hidden">Next</button>
+            <button class="nextBtnFive hidden">Next</button>
+            <button class="nextBtnSix hidden">Next</button>
+            <button class="nextBtnSeven hidden">Next</button>
+            <button class="nextBtnEight hidden">Next</button>
+            <button class="nextBtnNine hidden">Next</button>
+
+            <button class="restartBtn hidden">Restart</button>
+        </div>
+    
+        
+    </main>
+   
+   
     
 </body>
 </html>

@@ -1,0 +1,189 @@
+body{
+  background-image: url(https://cdn.mos.cms.futurecdn.net/xx67SBgCun5QSvsU5W64cf.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+}
+
+
+.hidden{
+  display: none;
+}
+
+.blur {
+  filter: blur(5px); /* adjust the value for desired blur intensity */
+}
+
+.text-bg{
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+#question-text{
+  color:white;
+  font-size: 20px;
+}
+
+.who {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: red 0 0 30px;
+  }
+
+.startBtn {
+    background-color: yellow;
+    color: blue;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 60px;
+    text-shadow: red 0 0 30px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .startBtn:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .allrightBtn {
+    background-color: yellow;
+    color: blue;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 60px;
+    text-shadow: red 0 0 30px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .allrightBtn:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .thankBtn {
+    background-color: yellow;
+    color: blue;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 60px;
+    text-shadow: red 0 0 30px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  input {
+    background-color: transparent;
+    color: white;
+    outline-color: white;
+    border: white;
+    border-radius: 20px;
+    padding: 15px 0px;
+    margin: 0 20px;
+    font-size: 60px;
+    text-shadow: red 0 0 30px;
+    width: 50%;
+    display: none; 
+  }
+
+  input:hover {
+    box-shadow: red 0 0 100px;;
+  }
+
+  ::placeholder {
+    color: white;
+    opacity: 1;
+    text-align: center;
+  }
+
+  input:focus {
+    outline-color: yellow;
+    border: yellow;
+    text-align: center;
+  }
+
+  .thankBtn:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .ok {
+    background-color: yellow;
+    color: blue;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 60px;
+    text-shadow: red 0 0 30px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .progress-container{
+
+  }
+
+  .progress-pill {
+
+    width: 100px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    text-shadow: red 0 0 30px;
+    margin: 5px 0;
+  }
+
+.btnShape {
+  background-color: white;
+  color: blue;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 15px;
+
+}
+.btnShape:hover {
+  color: black;
+  background-color: yellow;
+}
+
+.rightBtn {
+  background-color: green;
+  color:white;
+}
+.wrongBtn {
+  background-color: red;
+  color:white;
+}
+
+.border {
+  background-color: orangered;
+  border-width: 5px;
+  font-size: 20px;
+  color: white;
+}
