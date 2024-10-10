@@ -95,10 +95,6 @@ const questions = [
         }
 ]
 
-
-/*---------- Variables (state) ---------*/
-
-
 /*----- Cached Element References  -----*/
 
 const who = document.querySelector('.who')
@@ -182,6 +178,10 @@ function questionFour(){
     answerBtnThree.textContent = questions[3].answers[2].text;
     answerBtnFour.textContent = questions[3].answers[3].text;
 
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ3)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ3)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ3)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ3)
 };
 
 function questionFive(){
@@ -191,6 +191,11 @@ function questionFive(){
     answerBtnTwo.textContent = questions[4].answers[1].text;
     answerBtnThree.textContent = questions[4].answers[2].text;
     answerBtnFour.textContent = questions[4].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ4)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ4)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ4)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ4)
 };
 
 function questionSix(){
@@ -200,6 +205,11 @@ function questionSix(){
     answerBtnTwo.textContent = questions[5].answers[1].text;
     answerBtnThree.textContent = questions[5].answers[2].text;
     answerBtnFour.textContent = questions[5].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ5)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ5)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ5)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ5)
 };
 
 function questionSeven(){
@@ -209,6 +219,11 @@ function questionSeven(){
     answerBtnTwo.textContent = questions[6].answers[1].text;
     answerBtnThree.textContent = questions[6].answers[2].text;
     answerBtnFour.textContent = questions[6].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ6)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ6)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ6)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ6)
 };
 
 function questionEight(){
@@ -218,6 +233,11 @@ function questionEight(){
     answerBtnTwo.textContent = questions[7].answers[1].text;
     answerBtnThree.textContent = questions[7].answers[2].text;
     answerBtnFour.textContent = questions[7].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ7)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ7)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ7)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ7)
 };
 
 function  questionNine(){
@@ -227,6 +247,11 @@ function  questionNine(){
     answerBtnTwo.textContent = questions[8].answers[1].text;
     answerBtnThree.textContent = questions[8].answers[2].text;
     answerBtnFour.textContent = questions[8].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ8)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ8)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ8)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ8)
 };
 
 function questionTen(){
@@ -236,6 +261,11 @@ function questionTen(){
     answerBtnTwo.textContent = questions[9].answers[1].text;
     answerBtnThree.textContent = questions[9].answers[2].text;
     answerBtnFour.textContent = questions[9].answers[3].text;
+
+    answerBtnOne.removeEventListener('click', handleAnswerBtnOneQ9)
+    answerBtnTwo.removeEventListener('click', handleAnswerBtnTwoQ9)
+    answerBtnThree.removeEventListener('click', handleAnswerBtnThreeQ9)
+    answerBtnFour.removeEventListener('click', handleAnswerBtnFourQ9)
 }
  
 /*----------- Event Listeners ----------*/
@@ -483,7 +513,7 @@ function handleBtnSix(){
         nextBtnSix.style.display = "none";
         questionTextEl.classList.remove('hidden');
         questionContainerEl.classList.remove('hidden');
-        questionSix()
+        questionSeven()
     }
 }
 nextBtnSix.addEventListener('click',handleBtnSix)
@@ -500,7 +530,7 @@ function handleBtnSeven(){
         nextBtnSeven.style.display = "none";
         questionTextEl.classList.remove('hidden');
         questionContainerEl.classList.remove('hidden');
-        questionSeven()
+        questionEight()
     }
 }
 nextBtnSeven.addEventListener('click',handleBtnSeven)
@@ -516,7 +546,7 @@ function handleBtnEight(){
         nextBtnEight.style.display = "none";
         questionTextEl.classList.remove('hidden');
         questionContainerEl.classList.remove('hidden');
-        questionEight()
+        questionNine()
     }
 }
 nextBtnEight.addEventListener('click',handleBtnEight)
@@ -532,7 +562,7 @@ function handleBtnNine(){
         nextBtnNine.style.display = "none";
         questionTextEl.classList.remove('hidden');
         questionContainerEl.classList.remove('hidden');
-        questionNine()
+        questionTen()
     }
 }
 nextBtnNine.addEventListener('click',handleBtnNine)
@@ -651,10 +681,10 @@ function handleAnswerBtnOneQ3(){
         return
     }
 
-    if (questions[2].answers[0].text === "Paris"){
+    if (questions[2].answers[0].text === "Au"){
         answerBtnOne.classList.add('rightBtn')
         who.textContent = "Correct! you won $6000!";
-        nextBtnTwo.style.display = "inline";
+        nextBtnThree.style.display = "inline";
         pill3.classList.add('border');
     }
     
@@ -662,6 +692,763 @@ function handleAnswerBtnOneQ3(){
         answerBtnOne.classList.add('wrongBtn')
         who.textContent = "Wrong!";
     };
+    nextBtnThree.style.display = "inline";
 
 }
 answerBtnOne.addEventListener('click',handleAnswerBtnOneQ3)
+//=============================================================//
+function handleAnswerBtnTwoQ3(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[2].answers[1].text === "Au"){
+        answerBtnTwo.classList.add('rightBtn')
+        who.textContent = "Correct! you won $6000!";
+        nextBtnThree.style.display = "inline";
+        pill3.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnThree.style.display = "inline";
+
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ3)
+//=============================================================//
+function handleAnswerBtnThreeQ3(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[2].answers[2].text === "Au"){
+        answerBtnThree.classList.add('rightBtn')
+        who.textContent = "Correct! you won $6000!";
+        nextBtnThree.style.display = "inline";
+        pill3.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnThree.style.display = "inline";
+
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ3)
+//=============================================================//
+function handleAnswerBtnFourQ3(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[2].answers[3].text === "Au"){
+        answerBtnFour.classList.add('rightBtn')
+        who.textContent = "Correct! you won $6000!";
+        nextBtnThree.style.display = "inline";
+        pill3.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnThree.style.display = "inline";
+
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ3)
+
+//===============================================================//
+//=====================QUESTION FOUR=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ4(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[3].answers[0].text === "Mount Everest"){
+        answerBtnOne.classList.add('rightBtn')
+        who.textContent = "Correct! you won $15,000!";
+        nextBtnFour.style.display = "inline";
+        pill4.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnFour.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ4)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ4(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[3].answers[1].text === "Mount Everest"){
+        answerBtnTwo.classList.add('rightBtn')
+        who.textContent = "Correct! you won $15,000!";
+        nextBtnFour.style.display = "inline";
+        pill4.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnFour.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ4)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ4(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[3].answers[2].text === "Mount Everest"){
+        answerBtnThree.classList.add('rightBtn')
+        who.textContent = "Correct! you won $15,000!";
+        nextBtnFour.style.display = "inline";
+        pill4.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnFour.style.display = "inline";
+
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ4)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ4(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[3].answers[3].text === "Mount Everest"){
+        answerBtnFour.classList.add('rightBtn')
+        who.textContent = "Correct! you won $15,000!";
+        nextBtnFour.style.display = "inline";
+        pill4.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn')
+        who.textContent = "Wrong!";
+    };
+    nextBtnFour.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ4)
+
+//===============================================================//
+//=====================QUESTION FIVE=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ5(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[4].answers[0].text === "Pacific Ocean"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $30,000!";
+        nextBtnFive.style.display = "inline";
+        pill5.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnFive.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ5)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ5(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[4].answers[1].text === "Pacific Ocean"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $30,000!";
+        nextBtnFive.style.display = "inline";
+        pill5.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnFive.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ5)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ5(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[4].answers[2].text === "Pacific Ocean"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $30,000!";
+        nextBtnFive.style.display = "inline";
+        pill5.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnFive.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ5)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ5(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[4].answers[3].text === "Pacific Ocean"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $30,000!";
+        nextBtnFive.style.display = "inline";
+        pill5.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnFive.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ5)
+
+//===============================================================//
+//=====================QUESTION SIX=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ6(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[5].answers[0].text === "Russia"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $60,000!";
+        nextBtnSix.style.display = "inline";
+        pill6.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSix.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ6)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ6(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[5].answers[1].text === "Russia"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $60,000!";
+        nextBtnSix.style.display = "inline";
+        pill6.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSix.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ6)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ6(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[5].answers[2].text === "Russia"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $60,000!";
+        nextBtnSix.style.display = "inline";
+        pill6.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSix.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ6)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ6(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[5].answers[3].text === "Russia"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $60,000!";
+        nextBtnSix.style.display = "inline";
+        pill6.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSix.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ6)
+
+//===============================================================//
+//=====================QUESTION SEVEN=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ7(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[6].answers[0].text === "O"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $125,000!";
+        nextBtnSeven.style.display = "inline";
+        pill7.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSeven.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ7)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ7(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[6].answers[1].text === "O"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $125,000!";
+        nextBtnSeven.style.display = "inline";
+        pill7.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSeven.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ7)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ7(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[6].answers[2].text === "O"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $125,000!";
+        nextBtnSeven.style.display = "inline";
+        pill7.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSeven.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ7)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ7(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[6].answers[3].text === "O"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $125,000!";
+        nextBtnSeven.style.display = "inline";
+        pill7.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnSeven.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ7)
+
+//===============================================================//
+//=====================QUESTION EIGHT=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ8(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[7].answers[0].text === "Fe"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $250,000!";
+        nextBtnEight.style.display = "inline";
+        pill8.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnEight.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ8)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ8(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[7].answers[1].text === "Fe"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $250,000!";
+        nextBtnEight.style.display = "inline";
+        pill8.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnEight.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ8)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ8(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[7].answers[2].text === "Fe"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $250,000!";
+        nextBtnEight.style.display = "inline";
+        pill8.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnEight.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ8)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ8(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[7].answers[3].text === "Fe"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $250,000!";
+        nextBtnEight.style.display = "inline";
+        pill8.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnEight.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ8)
+
+//===============================================================//
+//=====================QUESTION NINE=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ9(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[8].answers[0].text === "C"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $500,000!";
+        nextBtnNine.style.display = "inline";
+        pill9.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnNine.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ9)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ9(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[8].answers[1].text === "C"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $500,000!";
+        nextBtnNine.style.display = "inline";
+        pill9.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnNine.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ9)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ9(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[8].answers[2].text === "C"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $500,000!";
+        nextBtnNine.style.display = "inline";
+        pill9.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnNine.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ9)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ9(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[8].answers[3].text === "C"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $500,000!";
+        nextBtnNine.style.display = "inline";
+        pill9.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnNine.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ9)
+
+//===============================================================//
+//=====================QUESTION TEN=============================//
+//===============================================================//
+
+function handleAnswerBtnOneQ10(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[9].answers[0].text === "H"){
+        answerBtnOne.classList.add('rightBtn');
+        who.textContent = "Correct! you won $1,000,000!";
+        nextBtnTen.style.display = "inline";
+        pill10.classList.add('border');
+    }
+    
+    else {
+        answerBtnOne.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnTen.style.display = "inline";
+
+}
+answerBtnOne.addEventListener('click',handleAnswerBtnOneQ10)
+
+//=============================================================//
+
+function handleAnswerBtnTwoQ10(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[9].answers[1].text === "H"){
+        answerBtnTwo.classList.add('rightBtn');
+        who.textContent = "Correct! you won $1,000,000!";
+        nextBtnTen.style.display = "inline";
+        pill10.classList.add('border');
+    }
+    
+    else {
+        answerBtnTwo.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnTen.style.display = "inline";
+
+}
+answerBtnTwo.addEventListener('click',handleAnswerBtnTwoQ10)
+
+//=============================================================//
+
+function handleAnswerBtnThreeQ10(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[9].answers[2].text === "H"){
+        answerBtnThree.classList.add('rightBtn');
+        who.textContent = "Correct! you won $1,000,000!";
+        nextBtnTen.style.display = "inline";
+        pill10.classList.add('border');
+    }
+    
+    else {
+        answerBtnThree.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnTen.style.display = "inline";
+
+}
+answerBtnThree.addEventListener('click',handleAnswerBtnThreeQ10)
+
+//=============================================================//
+
+function handleAnswerBtnFourQ10(){
+    if(who.textContent.includes('Correct!') || who.textContent.includes('Wrong!') ) {
+        //  do nothing if any button has been answered
+        return
+    }
+
+    if (questions[9].answers[3].text === "H"){
+        answerBtnFour.classList.add('rightBtn');
+        who.textContent = "Correct! you won $1,000,000!";
+        nextBtnTen.style.display = "inline";
+        pill10.classList.add('border');
+    }
+    
+    else {
+        answerBtnFour.classList.add('wrongBtn');
+        who.textContent = "Wrong!";
+    };
+    nextBtnTen.style.display = "inline";
+
+}
+answerBtnFour.addEventListener('click',handleAnswerBtnFourQ10)
