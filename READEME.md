@@ -22,6 +22,8 @@ Welcome to the "Who Wants to Be a Millionaire" game! This is a classic trivia ga
 
 You can play the game online by visiting: [Play here!](https://Mahdicoding1987.github.io/Who-want-to-be-a-millionaire/)
 
+![alt text](pic.png)
+
 ## Features
 
 - **Ten Questions
@@ -64,4 +66,12 @@ To run this project locally, follow these steps:
 * HTML5: Structure of the game.
 * CSS3: Styling the game and ensuring responsive design.
 * JavaScript (ES6): Game logic and interactivity.
+
+### Strech Goals
+
+* Add a timer for each question.
+* Add a leaderboard to track the top players.
+* Add a sound effect for correct and incorrect answers.
+* Add a feature to save the game progress and resume later.
+* Add a feature to share the game results on social media
 

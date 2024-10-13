@@ -291,7 +291,7 @@ startbtn.addEventListener('click', function(){
    }})
    
    thankBtn.addEventListener('click', function(){
-    who.textContent = "We are going to ask you ten question";
+    who.textContent = "We are going to ask you ten questions";
     who.style.fontSize = "80px";
     thankBtn.style.display = "none";
     ok.style.display = "inline";
